@@ -802,7 +802,7 @@ be back by July.
 
 fn main() {
 	data := '{ "name": "Frodo", "age": 25 }' 
-	user := json.decode(User, data) or {
+	user := json.decode<User>(data) or {
 		eprintln('Failed to decode json')
 		return 
 	} 
@@ -815,7 +815,7 @@ fn main() {
 <p> 
 JSON is very popular nowadays, that's why JSON support is built in. 
 <p>
-The first argument of the <code>json.decode</code> function is the type to decode to. 
+The template argument of the <code>json.decode</code> function is the type to decode to. 
 The second argument is the json string. 
 
 <p>
